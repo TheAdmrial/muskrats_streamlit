@@ -12,14 +12,18 @@ def get_data():
 df = get_data()
 
 # Write a header that says "Learning how to use Streamlit"
-
-
+st.write('## Learning how to use Streamlit')
 
 # Create a check box labeled "Show data" that when checked, displays the dataframe
 
+show_data = st.checkbox('Show Data')
 
+if show_data:
+    st.write(df)
 
 # Create a slider that allows the user to choose a range between two years from our movie dataset
+
+start_year, end_year = st.select_slider("Year Range", value = (2000,2015) , min_value = df.year.max(), max_value=df.year.min())
 
 # start_color, end_color = st.select_slider(
 #      'Select a range of color wavelength',

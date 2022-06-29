@@ -18,6 +18,7 @@ st.write("""# Muskrats Streamlit App""")
 
 # Show a table of the entire dataset.
 st.write("## Our dataset:")
+# 'writes' the df in a nice clean way
 st.write(df)
 
 # Show a table of the top movies by budget, with a slider to limit the number shown.
